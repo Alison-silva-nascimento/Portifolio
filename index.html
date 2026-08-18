@@ -208,9 +208,12 @@
                     <h3>FinanceOS</h3>
 
                     <p>
-                        Plataforma de gestão financeira pessoal com autenticação
-                        multiusuário, dashboards interativos, gestão de cartões,
-                        importação de documentos e análise de dados.
+                        Plataforma web de gestão financeira pessoal com autenticação própria, isolamento de dados por usuário
+                        e arquitetura híbrida SQLite/PostgreSQL. Possui dashboards interativos, gestão de cartões e faturas,
+                        conciliação bancária e importação de documentos com OCR.
+
+                        Segurança com PBKDF2-HMAC-SHA256, Row Level Security (RLS), controle de sessões e verificações
+                        automatizadas com CodeQL e Dependabot.
                     </p>
 
                     <div class="project-stack">
@@ -218,6 +221,7 @@
                         <span>Streamlit</span>
                         <span>PostgreSQL</span>
                         <span>Supabase</span>
+                        <span>Cloudflare</span>
                         <span>Docker</span>
                     </div>
 
@@ -236,15 +240,73 @@
                                 GitHub
                             </a>
                     </div>
+          </div>
+
+               <div class="project-preview finance-carousel">
+
+                    <div class="carousel-track">
+
+                        <img
+                            src="assets/images/financeos-dashboard.png"
+                            alt="Dashboard principal do FinanceOS"
+                            class="project-image carousel-image active"
+                        >
+
+                        <img
+                            src="assets/images/metricasfinance.png"
+                            alt="Métricas e análises do FinanceOS"
+                            class="project-image carousel-image"
+                        >
+
+                        <img
+                            src="assets/images/loginfinance.png"
+                            alt="Tela de login do FinanceOS"
+                            class="project-image carousel-image"
+                        >
+
                 </div>
 
-               <div class="project-preview">
-                    <img
-                        src="assets/images/financeos-dashboard.png"
-                        alt="Dashboard do FinanceOS"
-                        class="project-image"
-                    >
+                    <!-- SETA ESQUERDA -->
+                    <button
+                        class="carousel-btn carousel-prev"
+                        type="button"
+                        aria-label="Imagem anterior">
+                        ‹
+                    </button>
+
+                    <!-- SETA DIREITA -->
+                    <button
+                        class="carousel-btn carousel-next"
+                        type="button"
+                        aria-label="Próxima imagem">
+                        ›
+                    </button>
+
+                    <!-- INDICADORES -->
+                    <div class="carousel-dots">
+
+                        <button
+                            class="carousel-dot active"
+                            type="button"
+                            aria-label="Imagem 1">
+                        </button>
+
+                        <button
+                            class="carousel-dot"
+                            type="button"
+                            aria-label="Imagem 2">
+                        </button>
+
+                        <button
+                            class="carousel-dot"
+                            type="button"
+                            aria-label="Imagem 3">
+                        </button>
+
                     </div>
+                
+                    </div> <!-- fecha finance-carousel -->
+
             </article>
 
 
@@ -253,12 +315,15 @@
                 <div class="project-content">
                     <span class="project-number">02</span>
 
-                    <h3>InfraOS HURSG</h3>
+                    <h3>InfraOS</h3>
 
                     <p>
-                        Plataforma para monitoramento de infraestrutura,
-                        inventário de computadores, análise de capacidade,
-                        alertas e apoio à gestão de ambientes de TI.
+                        Plataforma interna de monitoramento e inventário de endpoints Windows, com coleta remota via WMI,
+                        organização por setores, análise de capacidade, alertas operacionais e apoio à gestão da infraestrutura de TI, 
+                       
+                        Centraliza informações de hardware, disponibilidade e utilização de recursos,
+                        reduzindo consultas manuais e facilitando a identificação de equipamentos
+                        que exigem intervenção técnica.
                     </p>
 
                     <div class="project-stack">
@@ -267,8 +332,6 @@
                         <span>WMI</span>
                         <span>PowerShell</span>
                         <span>Infraestrutura</span>
-                        <span>Dados</span>
-                         <span>Automação</span>
                     </div>
 
                     <div class="project-links">
@@ -278,14 +341,81 @@
                     </div>
                 </div>
 
-                 <div class="project-preview">
-                   <img
-                    src="assets/images/infraos-dashboard.png"
-                    alt="Dashboard do InfraOS"
-                    class="project-image"
-                     >
+                  <div class="project-preview infra-carousel">
+
+                  <div class="carousel-track">
+
+                    <img
+                        src="assets/images/infraos-dashboard.png"
+                        alt="Dashboard principal do InfraOS"
+                        class="project-image carousel-image active"
+                    >
+
+                    <img
+                        src="assets/images/logininfraos.png"
+                        alt="Tela de login do InfraOS"
+                        class="project-image carousel-image"
+                    >
+
+                    <img
+                        src="assets/images/detalhasetor.png"
+                        alt="Detalhes de setor do InfraOS"
+                        class="project-image carousel-image"
+                    >
+                    <img
+                        src="assets/images/visaoporsetores.png"
+                        alt="Visão por setores do InfraOS"
+                        class="project-image carousel-image"
+                    >
                     </div>
-            </article>
+                    <!-- SETA ESQUERDA -->
+                        <button
+                            class="carousel-btn carousel-prev"
+                            type="button"
+                            aria-label="Imagem anterior">
+                            ‹
+                        </button>
+
+                        <!-- SETA DIREITA -->
+                        <button
+                            class="carousel-btn carousel-next"
+                            type="button"
+                            aria-label="Próxima imagem">
+                            ›
+                        </button>
+
+                            <!-- INDICADORES -->
+                           <div class="carousel-dots">
+
+                        <button
+                                class="carousel-dot active"
+                                type="button"
+                                aria-label="Imagem 1">
+                        </button>
+
+                        <button
+                                class="carousel-dot"
+                                type="button"
+                                aria-label="Imagem 2">
+                        </button>
+
+                        <button
+                                class="carousel-dot"
+                                type="button"
+                                aria-label="Imagem 3">
+                        </button>
+
+                        <button
+                                class="carousel-dot"
+                                type="button"
+                                aria-label="Imagem 4">
+                        </button>
+
+                 </div>
+
+         </div>    
+
+         </article>
 
             <section class="technologies" id="tecnologias">
     <div class="technologies-container">
@@ -622,6 +752,11 @@
 
     </div>
 </footer>
+
+<script src="jsmain.js"></script>
+
+</body>
+</html>
 
 
 

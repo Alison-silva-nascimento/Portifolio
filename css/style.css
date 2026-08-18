@@ -1717,3 +1717,213 @@ ul {
     }
 
 }
+/* ========================================
+   CARROSSEL FINANCEOS
+======================================== */
+
+.finance-carousel {
+    position: relative;
+    width: 100%;
+    min-width: 0;
+    min-height: 300px;
+    padding: 14px;
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.finance-carousel .carousel-image {
+    display: none;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+    object-position: center;
+
+    border-radius: 10px;
+}
+
+.finance-carousel .carousel-image.active {
+    display: block;
+}
+
+/* Setas */
+
+.finance-carousel .carousel-btn {
+    position: absolute;
+    top: 50%;
+    z-index: 10;
+
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transform: translateY(-50%);
+
+    border: 1px solid rgba(148, 163, 184, 0.25);
+    border-radius: 50%;
+
+    background: rgba(7, 17, 31, 0.88);
+    color: #ffffff;
+
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.finance-carousel .carousel-prev {
+    left: 20px;
+}
+
+.finance-carousel .carousel-next {
+    right: 20px;
+}
+
+/* Indicadores */
+
+.finance-carousel .carousel-dots {
+    position: absolute;
+    left: 50%;
+    bottom: 12px;
+
+    display: flex;
+    gap: 7px;
+
+    transform: translateX(-50%);
+}
+
+.finance-carousel .carousel-dot {
+    width: 7px;
+    height: 7px;
+    padding: 0;
+
+    border: 0;
+    border-radius: 50%;
+
+    background: #475569;
+    cursor: pointer;
+}
+
+.finance-carousel .carousel-dot.active {
+    width: 20px;
+    border-radius: 999px;
+    background: #00d4ff;
+}
+/* Corrige exibição das imagens do carrossel */
+.finance-carousel .carousel-image,
+.infra-carousel .carousel-image {
+    display: none !important;
+}
+
+.finance-carousel .carousel-image.active,
+.infra-carousel .carousel-image.active {
+    display: block !important;
+}
+/* =========================
+   CARROSSEL INFRAOS
+========================= */
+
+.infra-carousel {
+    position: relative;
+    width: 100%;
+    min-width: 0;
+    min-height: 300px;
+    padding: 14px;
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid rgba(148, 163, 184, 0.12);
+    border-radius: 14px;
+}
+
+.infra-carousel .carousel-track {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-height: 270px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.infra-carousel .carousel-image {
+    display: none !important;
+    width: 100%;
+    height: 100%;
+    max-height: 300px;
+    object-fit: contain;
+    object-position: center;
+}
+
+.infra-carousel .carousel-image.active {
+    display: block !important;
+}
+
+/* Setas */
+.infra-carousel .carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    width: 34px;
+    height: 34px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid rgba(148, 163, 184, 0.25);
+    border-radius: 50%;
+
+    background: rgba(5, 15, 30, 0.9);
+    color: #ffffff;
+
+    cursor: pointer;
+    z-index: 10;
+}
+
+.infra-carousel .carousel-prev {
+    left: 18px;
+}
+
+.infra-carousel .carousel-next {
+    right: 18px;
+}
+
+/* Indicadores */
+.infra-carousel .carousel-dots {
+    position: absolute;
+    left: 50%;
+    bottom: 10px;
+    transform: translateX(-50%);
+
+    display: flex;
+    gap: 5px;
+    z-index: 10;
+}
+
+.infra-carousel .carousel-dot {
+    width: 6px;
+    height: 6px;
+    padding: 0;
+
+    border: 0;
+    border-radius: 999px;
+
+    background: rgba(148, 163, 184, 0.5);
+    cursor: pointer;
+}
+
+.infra-carousel .carousel-dot.active {
+    width: 18px;
+    background: #00d9ff;
+}
