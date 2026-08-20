@@ -1927,3 +1927,314 @@ ul {
     width: 18px;
     background: #00d9ff;
 }
+/* =========================================================
+   CASE STUDY — INFRAOS
+========================================================= */
+
+.case-container {
+    width: min(1180px, calc(100% - 48px));
+    margin: 0 auto;
+}
+
+/* HERO */
+
+.case-hero {
+    padding: 150px 0 90px;
+    border-bottom: 1px solid rgba(148, 163, 184, 0.12);
+}
+
+.case-back {
+    display: inline-block;
+    margin-bottom: 42px;
+    color: #94a3b8;
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.case-back:hover {
+    color: #00d9ff;
+}
+
+.case-hero .section-label {
+    display: block;
+    margin-bottom: 18px;
+}
+
+.case-hero h1 {
+    max-width: 900px;
+    margin: 0;
+    font-size: clamp(3rem, 7vw, 6rem);
+    line-height: 0.95;
+    letter-spacing: -0.055em;
+}
+
+.case-hero h1 span {
+    display: block;
+    margin-top: 12px;
+    color: #94a3b8;
+    font-weight: 500;
+}
+
+.case-hero-description {
+    max-width: 760px;
+    margin-top: 32px;
+    color: #aebbd0;
+    font-size: 1.08rem;
+    line-height: 1.8;
+}
+
+.case-stack {
+    margin-top: 32px;
+}
+
+
+/* SEÇÕES */
+
+.case-section {
+    padding: 100px 0;
+}
+
+.case-section h2 {
+    max-width: 780px;
+    margin: 16px 0 48px;
+    font-size: clamp(2rem, 4vw, 3.4rem);
+    line-height: 1.05;
+    letter-spacing: -0.04em;
+}
+
+.case-section h2 span {
+    color: #94a3b8;
+}
+
+
+/* PROBLEMA / SOLUÇÃO */
+
+.case-two-columns {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.case-card {
+    position: relative;
+    min-height: 310px;
+    padding: 36px;
+    overflow: hidden;
+
+    border: 1px solid rgba(148, 163, 184, 0.18);
+    border-radius: 18px;
+
+    background:
+        radial-gradient(
+            circle at 100% 0%,
+            rgba(0, 217, 255, 0.07),
+            transparent 40%
+        ),
+        rgba(9, 20, 35, 0.72);
+}
+
+.case-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 36px;
+    width: 44px;
+    height: 2px;
+    background: #00d9ff;
+}
+
+.case-number {
+    display: block;
+    margin-bottom: 44px;
+
+    color: #00d9ff;
+    font-family: monospace;
+    font-size: 0.78rem;
+    font-weight: 700;
+}
+
+.case-card h3 {
+    margin-bottom: 18px;
+    font-size: 1.55rem;
+}
+
+.case-card p {
+    margin: 0 0 16px;
+    color: #94a3b8;
+    line-height: 1.75;
+}
+
+
+/* RESPONSIVO */
+
+@media (max-width: 768px) {
+
+    .case-container {
+        width: min(100% - 32px, 1180px);
+    }
+
+    .case-hero {
+        padding: 120px 0 70px;
+    }
+
+    .case-hero h1 {
+        font-size: clamp(2.8rem, 13vw, 4.5rem);
+    }
+
+    .case-hero-description {
+        font-size: 1rem;
+    }
+
+    .case-section {
+        padding: 72px 0;
+    }
+
+    .case-two-columns {
+        grid-template-columns: 1fr;
+    }
+
+    .case-card {
+        min-height: auto;
+        padding: 28px;
+    }
+}
+/* =========================================================
+   ARQUITETURA — CASE INFRAOS
+========================================================= */
+
+.case-section-intro {
+    max-width: 760px;
+    margin: -25px 0 50px;
+
+    color: #94a3b8;
+    font-size: 1rem;
+    line-height: 1.75;
+}
+
+.architecture-flow {
+    display: grid;
+    grid-template-columns:
+        minmax(0, 1fr)
+        auto
+        minmax(0, 1fr)
+        auto
+        minmax(0, 1fr)
+        auto
+        minmax(0, 1fr)
+        auto
+        minmax(0, 1fr);
+
+    gap: 14px;
+    align-items: stretch;
+}
+
+.architecture-step {
+    min-width: 0;
+    padding: 24px;
+
+    border: 1px solid rgba(148, 163, 184, 0.16);
+    border-radius: 16px;
+
+    background: rgba(15, 23, 42, 0.6);
+}
+
+.architecture-number {
+    display: block;
+    margin-bottom: 24px;
+
+    color: #00d9ff;
+    font-family: monospace;
+    font-size: 0.72rem;
+    font-weight: 700;
+}
+
+.architecture-step h3 {
+    margin: 0 0 12px;
+
+    color: #f8fafc;
+    font-size: 1rem;
+}
+
+.architecture-step p {
+    margin: 0;
+
+    color: #94a3b8;
+    font-size: 0.82rem;
+    line-height: 1.6;
+}
+
+.architecture-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #00d9ff;
+
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.architecture-output {
+    margin-top: 24px;
+    padding: 22px 26px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+
+    border: 1px solid rgba(0, 217, 255, 0.16);
+    border-radius: 14px;
+
+    background: rgba(0, 217, 255, 0.045);
+}
+
+.architecture-output span {
+    color: #00d9ff;
+
+    font-family: monospace;
+    font-size: 0.75rem;
+    font-weight: 700;
+
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.architecture-output strong {
+    color: #cbd5e1;
+
+    font-size: 0.88rem;
+    font-weight: 500;
+
+    text-align: right;
+}
+
+
+/* RESPONSIVO */
+
+@media (max-width: 1050px) {
+
+    .architecture-flow {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .architecture-arrow {
+        transform: rotate(90deg);
+        height: 20px;
+    }
+
+    .architecture-step {
+        padding: 22px;
+    }
+
+    .architecture-output {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .architecture-output strong {
+        text-align: left;
+    }
+}

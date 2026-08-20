@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>InfraOS | Case Técnico</title>
+
+    <meta
+        name="description"
+        content="Case técnico do InfraOS, solução para monitoramento e inventário de infraestrutura desenvolvida com Python, Streamlit, WMI e PowerShell."
+    >
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header class="header">
+    <nav class="navbar">
+
+        <a href="index.html#inicio" class="logo">
+            <span class="logo-symbol">&lt;/&gt;</span>
+            <span>Alison</span><strong> Silva</strong>
+        </a>
+
+        <ul class="nav-links">
+            <li><a href="index.html#projetos">Projetos</a></li>
+            <li><a href="index.html#tecnologias">Tecnologias</a></li>
+            <li><a href="index.html#experiencia">Experiência</a></li>
+            <li><a href="index.html#contato">Contato</a></li>
+        </ul>
+
+    </nav>
+</header>
+
+<main>
+
+    <section class="case-hero">
+        <div class="case-container">
+
+            <a href="index.html#projetos" class="case-back">
+                ← Voltar para projetos
+            </a>
+
+            <span class="section-label">CASE TÉCNICO</span>
+
+            <h1>
+                InfraOS
+                <span>monitoramento e inventário de infraestrutura.</span>
+            </h1>
+
+            <p class="case-hero-description">
+                Solução interna desenvolvida para centralizar informações de
+                endpoints Windows, apoiar o monitoramento operacional e reduzir
+                consultas manuais na gestão da infraestrutura de TI.
+            </p>
+
+            <div class="project-stack case-stack">
+                <span>Python</span>
+                <span>Streamlit</span>
+                <span>WMI</span>
+                <span>PowerShell</span>
+                <span>SQL</span>
+                <span>Infraestrutura</span>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="case-section">
+        <div class="case-container">
+
+            <span class="section-label">CONTEXTO</span>  
+
+  <h2>
+                Do inventário disperso a uma
+                <span>visão centralizada.</span>
+            </h2>
+
+            <div class="case-two-columns">
+
+                <article class="case-card">
+                    <span class="case-number">01</span>
+
+                    <h3>O problema</h3>
+
+                    <p>
+                        Informações de computadores, disponibilidade, capacidade
+                        e utilização de recursos exigiam consultas manuais e
+                        acompanhamento distribuído entre diferentes rotinas.
+                    </p>
+
+                    <p>
+                        Esse cenário dificultava a identificação rápida de
+                        equipamentos que precisavam de atenção e aumentava o
+                        tempo gasto em tarefas operacionais repetitivas.
+                    </p>
+                </article>
+
+
+                <article class="case-card">
+                    <span class="case-number">02</span>
+
+                    <h3>A solução</h3>
+
+                    <p>
+                        O InfraOS centraliza coleta, inventário, monitoramento,
+                        organização por setores e alertas em uma única interface.
+                    </p>
+
+                    <p>
+                        A aplicação permite consultar informações de hardware,
+                        disponibilidade e utilização de recursos, apoiando a
+                        tomada de decisão e a priorização de intervenções técnicas.
+                    </p>
+                </article>
+
+            </div>
+
+        </div>
+    </section>
+
+</main>
+<section class="case-section">
+    <div class="case-container">
+
+        <span class="section-label">ARQUITETURA</span>
+
+        <h2>
+            Como os dados percorrem
+            <span>a solução.</span>
+        </h2>
+
+        <p class="case-section-intro">
+            O InfraOS coleta informações de endpoints Windows, processa os dados
+            no backend em Python, persiste o inventário em SQLite e apresenta
+            indicadores operacionais por meio da interface Streamlit.
+        </p>
+
+        <div class="architecture-flow">
+
+            <div class="architecture-step">
+                <span class="architecture-number">01</span>
+                <h3>Endpoints Windows</h3>
+                <p>
+                    Equipamentos monitorados na infraestrutura corporativa.
+                </p>
+            </div>
+
+            <span class="architecture-arrow">→</span>
+
+            <div class="architecture-step">
+                <span class="architecture-number">02</span>
+                <h3>WMI / PowerShell</h3>
+                <p>
+                    Coleta remota de informações de hardware, sistema e utilização.
+                </p>
+            </div>
+
+            <span class="architecture-arrow">→</span>
+
+            <div class="architecture-step">
+                <span class="architecture-number">03</span>
+                <h3>Python</h3>
+                <p>
+                    Tratamento, normalização e aplicação das regras operacionais.
+                </p>
+            </div>
+
+            <span class="architecture-arrow">→</span>
+
+            <div class="architecture-step">
+                <span class="architecture-number">04</span>
+                <h3>SQLite</h3>
+                <p>
+                    Persistência do inventário, histórico e informações coletadas.
+                </p>
+            </div>
+
+            <span class="architecture-arrow">→</span>
+
+            <div class="architecture-step">
+                <span class="architecture-number">05</span>
+                <h3>Streamlit</h3>
+                <p>
+                    Interface de monitoramento, setores, inventário e alertas.
+                </p>
+            </div>
+
+        </div>
+
+        <div class="architecture-output">
+            <span>Saída operacional</span>
+            <strong>
+                Dashboard • Inventário • Alertas • Capacidade • Visão por setores
+            </strong>
+        </div>
+
+    </div>
+</section>    
+
+<footer class="footer">
+    <div class="footer-container">
+
+        <a href="index.html#inicio" class="footer-logo">
+            &lt;/&gt; <span>Alison</span> Silva
+        </a>
+
+        <p>
+            Case técnico • InfraOS
+        </p>
+
+        <a href="index.html#projetos" class="back-to-top">
+            Voltar ao portfólio ↑
+        </a>
+
+    </div>
+
+</footer>
+
+</body>
+</html>
