@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FinanceOS | Case de Gestão Financeira e Segurança</title>
+    <meta name="description" content="Case técnico do FinanceOS: gestão financeira com Python, Streamlit, PostgreSQL, Supabase, RLS, autenticação própria e importação de documentos com OCR.">
+    <meta name="theme-color" content="#07111f">
+    <meta property="og:title" content="FinanceOS | Case de Gestão Financeira e Segurança">
+    <meta property="og:description" content="Arquitetura, segurança e decisões técnicas de uma plataforma de gestão financeira pessoal.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://alison-silva-nascimento.github.io/Portifolio/financeos.html">
+    <meta name="twitter:card" content="summary">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="header">
+    <nav class="navbar" aria-label="Navegação principal">
+        <a href="index.html#inicio" class="logo"><span class="logo-symbol">&lt;/&gt;</span><span>Alison</span><strong> Silva</strong></a>
+        <ul class="nav-links">
+            <li><a href="index.html#projetos">Projetos</a></li>
+            <li><a href="index.html#tecnologias">Tecnologias</a></li>
+            <li><a href="index.html#experiencia">Experiência</a></li>
+            <li><a href="index.html#contato">Contato</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main class="case-finance">
+    <section class="case-hero">
+        <div class="case-container">
+            <a href="index.html#projetos" class="case-back">← Voltar para projetos</a>
+            <span class="section-label">CASE TÉCNICO</span>
+            <h1>FinanceOS <span>gestão financeira com isolamento e segurança.</span></h1>
+            <p class="case-hero-description">Plataforma web de gestão financeira pessoal que reúne movimentações, cartões, faturas, planejamento e análise de dados em uma experiência multiusuário.</p>
+            <div class="project-stack case-stack"><span>Python</span><span>Streamlit</span><span>PostgreSQL</span><span>Supabase</span><span>Cloudflare</span><span>Docker</span></div>
+            <div class="case-hero-actions">
+                <a href="https://financeos.gestao-financeira.workers.dev" target="_blank" rel="noopener noreferrer" class="project-btn primary">Ver projeto</a>
+                <a href="https://github.com/Alison-silva-nascimento/FinanceOS" target="_blank" rel="noopener noreferrer" class="project-btn">GitHub</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="case-section">
+        <div class="case-container">
+            <span class="section-label">CONTEXTO</span>
+            <h2>Da informação fragmentada a uma <span>visão financeira integrada.</span></h2>
+            <div class="case-two-columns">
+                <article class="case-card"><span class="case-number">01</span><h3>O problema</h3><p>Receitas, despesas, cartões, faturas e documentos financeiros geram informações relacionadas, mas frequentemente acompanhadas de forma separada.</p><p>Sem uma visão consolidada, conciliar registros, entender padrões e planejar decisões exige mais trabalho manual.</p></article>
+                <article class="case-card"><span class="case-number">02</span><h3>A solução</h3><p>O FinanceOS concentra o ciclo financeiro em uma única plataforma, mantendo os dados isolados por usuário.</p><p>A aplicação conecta registro, conciliação, planejamento, importação documental e análise sem reduzir o produto a um dashboard de leitura.</p></article>
+            </div>
+        </div>
+    </section>
+
+    <section class="case-section case-features">
+        <div class="case-container">
+            <span class="section-label">EXPERIÊNCIA DO PRODUTO</span>
+            <h2>Do registro cotidiano à <span>leitura estratégica dos dados.</span></h2>
+            <p class="case-section-intro">As telas já disponíveis no projeto demonstram os principais momentos da experiência.</p>
+            <div class="case-feature-list">
+                <article class="case-feature">
+                    <div class="case-feature-image"><img src="assets/images/financeos-dashboard.png" alt="Dashboard principal do FinanceOS com resumo financeiro" width="771" height="408" decoding="async"></div>
+                    <div class="case-feature-content"><span class="case-feature-number">01 / DASHBOARD</span><h3>Contexto para a próxima decisão</h3><p>A página inicial aproxima saldos, compromissos e ações frequentes para reduzir a distância entre visualizar e registrar.</p><ul><li>Resumo da situação financeira</li><li>Acesso rápido às principais operações</li><li>Cartões e faturas no mesmo fluxo</li><li>Planejamento conectado aos registros</li></ul></div>
+                </article>
+                <article class="case-feature case-feature-reverse">
+                    <div class="case-feature-image case-feature-image-portrait"><img src="assets/images/metricasfinance.png" alt="Painel de métricas e análises do FinanceOS" width="793" height="822" loading="lazy" decoding="async"></div>
+                    <div class="case-feature-content"><span class="case-feature-number">02 / ANÁLISES</span><h3>Dados transformados em leitura financeira</h3><p>As análises organizam evolução, categorias, períodos e balanço para revelar como o dinheiro se movimenta.</p><ul><li>Evolução ao longo do período</li><li>Distribuição por categorias</li><li>Comparações entre receitas e despesas</li><li>Apoio ao acompanhamento de hábitos</li></ul></div>
+                </article>
+                <article class="case-feature">
+                    <div class="case-feature-image"><img src="assets/images/loginfinance.png" alt="Tela de autenticação do FinanceOS" width="843" height="541" loading="lazy" decoding="async"></div>
+                    <div class="case-feature-content"><span class="case-feature-number">03 / ACESSO</span><h3>Experiência multiusuário protegida</h3><p>Autenticação, sessões e isolamento de dados fazem parte da arquitetura do produto, não apenas da interface de entrada.</p><ul><li>Autenticação própria</li><li>Controle de sessões</li><li>Dados vinculados ao usuário</li><li>Proteção aplicada também no banco</li></ul></div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="case-section">
+        <div class="case-container">
+            <span class="section-label">ARQUITETURA</span>
+            <h2>Camadas conectadas para <span>manter regras e dados consistentes.</span></h2>
+            <p class="case-section-intro">A interface Streamlit orquestra os fluxos da aplicação em Python. A camada de dados suporta SQLite e PostgreSQL, com Supabase no ambiente PostgreSQL e entrega pela infraestrutura Cloudflare.</p>
+            <div class="finance-architecture" aria-label="Fluxo simplificado da arquitetura do FinanceOS">
+                <article class="architecture-step"><span class="architecture-number">01</span><h3>Interface</h3><p>Streamlit apresenta navegação, formulários e dashboards.</p></article>
+                <span class="architecture-arrow" aria-hidden="true">→</span>
+                <article class="architecture-step"><span class="architecture-number">02</span><h3>Aplicação Python</h3><p>Regras financeiras, autenticação, sessões, conciliação e importação.</p></article>
+                <span class="architecture-arrow" aria-hidden="true">→</span>
+                <article class="architecture-step"><span class="architecture-number">03</span><h3>Persistência híbrida</h3><p>SQLite ou PostgreSQL conforme o ambiente de execução.</p></article>
+            </div>
+            <div class="architecture-output"><span>Fluxos do produto</span><strong>Movimentações • Cartões • Faturas • Planejamento • OCR • Relatórios</strong></div>
+        </div>
+    </section>
+
+    <section class="case-section case-security">
+        <div class="case-container">
+            <span class="section-label">SEGURANÇA</span>
+            <h2>Proteção aplicada em <span>mais de uma camada.</span></h2>
+            <p class="case-section-intro">Como o domínio envolve informações financeiras pessoais, autenticar o usuário não é suficiente: aplicação, sessão e banco precisam compartilhar o mesmo modelo de isolamento.</p>
+            <div class="security-grid">
+                <article class="security-card"><span>01</span><h3>PBKDF2-HMAC-SHA256</h3><p>Senhas são processadas com derivação criptográfica, evitando armazenamento em texto puro.</p></article>
+                <article class="security-card"><span>02</span><h3>Row Level Security</h3><p>Políticas de RLS reforçam no PostgreSQL/Supabase quais registros cada usuário pode acessar.</p></article>
+                <article class="security-card"><span>03</span><h3>Controle de sessões</h3><p>O estado autenticado é tratado como parte explícita do fluxo de acesso da aplicação.</p></article>
+                <article class="security-card"><span>04</span><h3>Verificação contínua</h3><p>CodeQL e Dependabot automatizam parte da análise de código e dependências no repositório.</p></article>
+            </div>
+        </div>
+    </section>
+
+    <section class="case-section case-decisions">
+        <div class="case-container">
+            <span class="section-label">DECISÕES TÉCNICAS</span>
+            <h2>Escolhas alinhadas ao <span>produto e ao estágio atual.</span></h2>
+            <div class="decision-grid">
+                <article class="decision-card"><span class="decision-number">01</span><span class="decision-tech">STREAMLIT</span><h3>Produto orientado a fluxos e dados</h3><p>A interface permanece próxima das regras escritas em Python.</p><div class="decision-reason"><strong>Por quê?</strong><p>Permite evoluir formulários, dashboards e operações sem separar prematuramente frontend e backend.</p></div></article>
+                <article class="decision-card"><span class="decision-number">02</span><span class="decision-tech">SQLITE / POSTGRESQL</span><h3>Persistência adaptável ao ambiente</h3><p>A aplicação trabalha com uma arquitetura híbrida de dados.</p><div class="decision-reason"><strong>Por quê?</strong><p>SQLite reduz atrito em contextos locais, enquanto PostgreSQL atende o cenário multiusuário hospedado.</p></div></article>
+                <article class="decision-card"><span class="decision-number">03</span><span class="decision-tech">OCR</span><h3>Documentos entram no fluxo</h3><p>A importação reduz a necessidade de transcrever manualmente informações disponíveis em documentos.</p><div class="decision-reason"><strong>Por quê?</strong><p>Automação agrega valor quando complementa a conferência do usuário em vez de ocultar possíveis inconsistências.</p></div></article>
+                <article class="decision-card"><span class="decision-number">04</span><span class="decision-tech">RLS</span><h3>Isolamento também no banco</h3><p>O controle de acesso não depende exclusivamente da interface.</p><div class="decision-reason"><strong>Por quê?</strong><p>Defesa em profundidade reduz o impacto de uma consulta inadequada na camada da aplicação.</p></div></article>
+            </div>
+        </div>
+    </section>
+
+    <section class="case-section case-evolution">
+        <div class="case-container">
+            <span class="section-label">TRADE-OFFS &amp; EVOLUÇÃO</span>
+            <h2>Complexidade adicionada <span>somente onde protege ou entrega valor.</span></h2>
+            <p class="case-section-intro">Os caminhos abaixo representam critérios de evolução, não promessas de funcionalidades já implementadas.</p>
+            <div class="evolution-list">
+                <article class="evolution-item"><div class="evolution-index"><span>01</span></div><div class="evolution-current"><span class="evolution-label">CENÁRIO ATUAL</span><h3>Aplicação Streamlit integrada</h3><p>Interface e regras evoluem no mesmo ecossistema Python.</p></div><div class="evolution-arrow" aria-hidden="true">→</div><div class="evolution-future"><span class="evolution-label">SE A EXPERIÊNCIA EXIGIR</span><h3>Frontend e API separados</h3><p>Uma separação passa a fazer sentido quando UX, integrações ou clientes independentes justificarem o custo.</p></div></article>
+                <article class="evolution-item"><div class="evolution-index"><span>02</span></div><div class="evolution-current"><span class="evolution-label">CENÁRIO ATUAL</span><h3>Processamento no fluxo</h3><p>Importações e conciliações permanecem próximas da interação do usuário.</p></div><div class="evolution-arrow" aria-hidden="true">→</div><div class="evolution-future"><span class="evolution-label">SE O VOLUME EXIGIR</span><h3>Processamento assíncrono</h3><p>Filas e workers podem ser considerados quando documentos maiores ou maior concorrência tornarem o fluxo síncrono inadequado.</p></div></article>
+                <article class="evolution-item"><div class="evolution-index"><span>03</span></div><div class="evolution-current"><span class="evolution-label">CENÁRIO ATUAL</span><h3>Dois bancos suportados</h3><p>SQLite e PostgreSQL atendem ambientes distintos.</p></div><div class="evolution-arrow" aria-hidden="true">→</div><div class="evolution-future"><span class="evolution-label">SE A MANUTENÇÃO EXIGIR</span><h3>Convergência de persistência</h3><p>Reduzir variações pode valer a pena caso o custo de manter comportamentos equivalentes supere o benefício da flexibilidade.</p></div></article>
+            </div>
+            <div class="evolution-principle"><span class="evolution-principle-label">PRINCÍPIO</span><p>Tratar segurança como requisito estrutural e <strong>evoluir a arquitetura a partir de necessidades observáveis.</strong></p></div>
+        </div>
+    </section>
+
+    <section class="case-section case-results">
+        <div class="case-container">
+            <span class="section-label">RESULTADO &amp; APRENDIZADOS</span>
+            <h2>Mais do que registrar valores: <span>organizar o ciclo financeiro.</span></h2>
+            <div class="case-two-columns">
+                <article class="case-card"><span class="case-number">RESULTADO</span><h3>Uma visão financeira conectada</h3><p>O FinanceOS reúne operações, cartões, faturas, conciliação, documentos e análises em uma plataforma que preserva o contexto de cada usuário.</p></article>
+                <article class="case-card"><span class="case-number">APRENDIZADOS</span><h3>Segurança faz parte do domínio</h3><p>O projeto aprofundou modelagem financeira, autenticação, sessões, isolamento de dados, compatibilidade entre bancos e automação de qualidade em uma aplicação real.</p></article>
+            </div>
+        </div>
+    </section>
+
+    <section class="case-cta"><div class="case-container"><p>Quer conhecer o case de infraestrutura?</p><a href="infraos.html" class="project-btn primary">Explorar InfraOS</a></div></section>
+</main>
+
+<footer class="footer"><div class="footer-container"><a href="index.html#inicio" class="footer-logo">&lt;/&gt; <span>Alison</span> Silva</a><p>Case técnico • FinanceOS</p><a href="index.html#projetos" class="back-to-top">Voltar ao portfólio ↑</a></div></footer>
+</body>
+</html>
