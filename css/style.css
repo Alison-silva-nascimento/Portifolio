@@ -2365,3 +2365,454 @@ ul {
         max-width: none;
     }
 }
+/* =====================================================
+   CASE INFRAOS — DECISÕES TÉCNICAS
+===================================================== */
+
+.case-decisions {
+    border-top: 1px solid rgba(148, 163, 184, 0.12);
+}
+
+.case-section-intro {
+    max-width: 760px;
+    margin: 20px 0 48px;
+    color: #94a3b8;
+    line-height: 1.8;
+}
+
+.decision-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.decision-card {
+    position: relative;
+    padding: 30px;
+    border: 1px solid rgba(148, 163, 184, 0.18);
+    border-radius: 14px;
+    background: rgba(15, 23, 42, 0.45);
+    overflow: hidden;
+}
+
+.decision-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 28px;
+    width: 42px;
+    height: 2px;
+    background: #00e5ff;
+}
+
+.decision-number {
+    display: block;
+    margin-bottom: 28px;
+
+    color: #00e5ff;
+    font-family: monospace;
+    font-size: 0.72rem;
+    font-weight: 700;
+}
+
+.decision-tech {
+    display: block;
+    margin-bottom: 10px;
+
+    color: #00e5ff;
+    font-family: monospace;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+}
+
+.decision-card h3 {
+    margin: 0 0 14px;
+    font-size: 1.3rem;
+}
+
+.decision-card > p {
+    margin: 0;
+    color: #94a3b8;
+    line-height: 1.75;
+}
+
+.decision-reason {
+    margin-top: 24px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(148, 163, 184, 0.12);
+}
+
+.decision-reason strong {
+    color: #f8fafc;
+    font-size: 0.85rem;
+}
+
+.decision-reason p {
+    margin: 8px 0 0;
+    color: #94a3b8;
+    line-height: 1.7;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    .decision-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .decision-card {
+        padding: 24px;
+    }
+}
+/* =====================================================
+   CASE INFRAOS — TRADE-OFFS & EVOLUÇÃO
+===================================================== */
+
+.case-evolution .case-container {
+    width: min(100% - 64px, 1180px);
+    margin-inline: auto;
+}
+
+.evolution-list {
+    margin-top: 48px;
+
+    border-top: 1px solid rgba(148, 163, 184, 0.16);
+}
+
+.evolution-item {
+    display: grid;
+    grid-template-columns: 55px minmax(0, 1fr) 60px minmax(0, 1fr);
+    gap: 28px;
+    align-items: center;
+
+    padding: 32px 0;
+
+    border-bottom: 1px solid rgba(148, 163, 184, 0.16);
+}
+
+.evolution-index {
+    align-self: start;
+}
+
+.evolution-index span {
+    color: #00e5ff;
+    font-family: monospace;
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+.evolution-label {
+    display: block;
+
+    margin-bottom: 10px;
+
+    color: #00e5ff;
+    font-family: monospace;
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+}
+
+.evolution-current h3,
+.evolution-future h3 {
+    margin: 0 0 10px;
+
+    color: #f8fafc;
+    font-size: 1.25rem;
+}
+
+.evolution-current p,
+.evolution-future p {
+    max-width: 460px;
+    margin: 0;
+
+    color: #94a3b8;
+    line-height: 1.7;
+}
+
+.evolution-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #00e5ff;
+    font-size: 1.5rem;
+}
+
+.evolution-principle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+
+    margin-top: 32px;
+    padding: 22px 26px;
+
+    border: 1px solid rgba(0, 229, 255, 0.25);
+    border-radius: 12px;
+
+    background: rgba(0, 229, 255, 0.035);
+}
+
+.evolution-principle-label {
+    flex-shrink: 0;
+
+    color: #00e5ff;
+    font-family: monospace;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+}
+
+.evolution-principle p {
+    margin: 0;
+
+    color: #cbd5e1;
+    line-height: 1.6;
+    text-align: right;
+}
+
+.evolution-principle strong {
+    color: #f8fafc;
+}
+
+
+/* RESPONSIVO */
+
+@media (max-width: 768px) {
+    .case-evolution .case-container {
+        width: min(100% - 32px, 1180px);
+    }
+
+    .evolution-index {
+        margin-bottom: 4px;
+    }
+
+    .evolution-arrow {
+        justify-content: flex-start;
+
+        transform: rotate(90deg);
+
+        width: fit-content;
+    }
+
+    .evolution-principle {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .evolution-principle p {
+        text-align: left;
+    }
+}
+
+/* =====================================================
+   REVISÃO FINAL — ACESSIBILIDADE, CARROSSEL E CONSISTÊNCIA
+===================================================== */
+
+body {
+    overflow-x: hidden;
+}
+
+:where(a, button):focus-visible {
+    outline: 3px solid #67e8f9;
+    outline-offset: 4px;
+}
+
+.carousel {
+    position: relative;
+    min-height: clamp(260px, 34vw, 410px);
+    padding: 14px;
+    overflow: hidden;
+}
+
+.carousel .carousel-track {
+    width: 100%;
+    min-height: inherit;
+    display: grid;
+    place-items: center;
+}
+
+.carousel .carousel-image {
+    grid-area: 1 / 1;
+    display: none;
+    width: 100%;
+    height: clamp(240px, 31vw, 380px);
+    object-fit: contain;
+    object-position: center;
+    border-radius: 10px;
+}
+
+.carousel .carousel-image.active {
+    display: block;
+}
+
+.carousel .carousel-btn {
+    width: 44px;
+    height: 44px;
+}
+
+.carousel .carousel-dot {
+    min-width: 12px;
+    min-height: 12px;
+}
+
+.carousel .carousel-dot.active {
+    min-width: 28px;
+}
+
+.carousel.is-static .carousel-btn,
+.carousel.is-static .carousel-dots {
+    display: none;
+}
+
+.contact-card-secondary {
+    opacity: 0.78;
+    background: rgba(9, 20, 35, 0.45);
+}
+
+.contact-card-primary {
+    border-color: rgba(34, 211, 238, 0.28);
+}
+
+.case-feature-image {
+    min-height: clamp(220px, 36vw, 480px);
+    display: grid;
+    place-items: center;
+}
+
+.case-feature-image img {
+    width: 100%;
+    height: 100%;
+    max-height: 456px;
+    object-fit: contain;
+}
+
+.case-narrow {
+    max-width: 900px;
+}
+
+.case-privacy {
+    background: rgba(0, 217, 255, 0.025);
+    border-block: 1px solid rgba(148, 163, 184, 0.12);
+}
+
+.case-privacy p {
+    color: #aebbd0;
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+.case-cta {
+    padding: 70px 0;
+    text-align: center;
+    border-top: 1px solid rgba(148, 163, 184, 0.12);
+}
+
+.case-cta p {
+    margin-bottom: 24px;
+    color: #cbd5e1;
+    font-size: clamp(1.25rem, 2.5vw, 1.8rem);
+}
+
+@media (max-width: 1000px) {
+    .nav-links {
+        gap: 18px;
+    }
+}
+
+@media (max-width: 780px) {
+    .navbar {
+        height: auto;
+        min-height: 72px;
+        padding: 14px 20px;
+        gap: 16px;
+    }
+
+    .nav-links {
+        max-width: 68vw;
+        padding: 10px 2px;
+        overflow-x: auto;
+        scrollbar-width: none;
+    }
+
+    .nav-links::-webkit-scrollbar {
+        display: none;
+    }
+
+    .nav-links a {
+        white-space: nowrap;
+    }
+
+    .evolution-item {
+        grid-template-columns: 36px minmax(0, 1fr);
+        gap: 14px;
+    }
+
+    .evolution-arrow,
+    .evolution-future {
+        grid-column: 2;
+    }
+
+    .evolution-arrow {
+        transform: rotate(90deg);
+    }
+
+    .carousel {
+        min-height: 270px;
+        padding-inline: 8px;
+    }
+
+    .carousel .carousel-image {
+        height: 250px;
+    }
+}
+
+@media (max-width: 430px) {
+    .logo strong {
+        display: none;
+    }
+
+    .hero h1 {
+        font-size: clamp(2.35rem, 12vw, 3rem);
+        letter-spacing: -0.06em;
+    }
+
+    .hero-label {
+        font-size: 0.68rem;
+        line-height: 1.6;
+    }
+
+    .carousel .carousel-btn {
+        width: 40px;
+        height: 40px;
+    }
+
+    .finance-carousel .carousel-prev,
+    .infra-carousel .carousel-prev {
+        left: 10px;
+    }
+
+    .finance-carousel .carousel-next,
+    .infra-carousel .carousel-next {
+        right: 10px;
+    }
+
+    .case-feature-image {
+        min-height: 180px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}

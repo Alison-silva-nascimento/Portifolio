@@ -1,346 +1,72 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>InfraOS | Case Técnico</title>
-
-    <meta
-        name="description"
-        content="Case técnico do InfraOS, solução para monitoramento e inventário de infraestrutura desenvolvida com Python, Streamlit, WMI e PowerShell."
-    >
-
+    <title>InfraOS | Case de Monitoramento e Inventário</title>
+    <meta name="description" content="Case técnico do InfraOS: monitoramento e inventário de endpoints Windows com Python, Streamlit, WMI, PowerShell e SQLite.">
+    <meta name="theme-color" content="#07111f">
+    <meta property="og:title" content="InfraOS | Case de Monitoramento e Inventário">
+    <meta property="og:description" content="Arquitetura, decisões técnicas e aprendizados de uma solução interna para infraestrutura Windows.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://alison-silva-nascimento.github.io/Portfolio/infraos.html">
+    <meta name="twitter:card" content="summary">
     <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
-
-<header class="header">
-    <nav class="navbar">
-
-        <a href="index.html#inicio" class="logo">
-            <span class="logo-symbol">&lt;/&gt;</span>
-            <span>Alison</span><strong> Silva</strong>
-        </a>
-
-        <ul class="nav-links">
-            <li><a href="index.html#projetos">Projetos</a></li>
-            <li><a href="index.html#tecnologias">Tecnologias</a></li>
-            <li><a href="index.html#experiencia">Experiência</a></li>
-            <li><a href="index.html#contato">Contato</a></li>
-        </ul>
-
-    </nav>
-</header>
-
+<header class="header"><nav class="navbar" aria-label="Navegação principal">
+    <a href="index.html#inicio" class="logo"><span class="logo-symbol">&lt;/&gt;</span><span>Alison</span><strong> Silva</strong></a>
+    <ul class="nav-links"><li><a href="index.html#projetos">Projetos</a></li><li><a href="index.html#tecnologias">Tecnologias</a></li><li><a href="index.html#experiencia">Experiência</a></li><li><a href="index.html#contato">Contato</a></li></ul>
+</nav></header>
 <main>
-
-    <section class="case-hero">
-        <div class="case-container">
-
-            <a href="index.html#projetos" class="case-back">
-                ← Voltar para projetos
-            </a>
-
-            <span class="section-label">CASE TÉCNICO</span>
-
-            <h1>
-                InfraOS
-                <span>monitoramento e inventário de infraestrutura.</span>
-            </h1>
-
-            <p class="case-hero-description">
-                Solução interna desenvolvida para centralizar informações de
-                endpoints Windows, apoiar o monitoramento operacional e reduzir
-                consultas manuais na gestão da infraestrutura de TI.
-            </p>
-
-            <div class="project-stack case-stack">
-                <span>Python</span>
-                <span>Streamlit</span>
-                <span>WMI</span>
-                <span>PowerShell</span>
-                <span>SQL</span>
-                <span>Infraestrutura</span>
-            </div>
-
-        </div>
-    </section>
-
-    <section class="case-section">
-        <div class="case-container">
-
-            <span class="section-label">CONTEXTO</span>  
-
-  <h2>
-                Do inventário disperso a uma
-                <span>visão centralizada.</span>
-            </h2>
-
-            <div class="case-two-columns">
-
-                <article class="case-card">
-                    <span class="case-number">01</span>
-
-                    <h3>O problema</h3>
-
-                    <p>
-                        Informações de computadores, disponibilidade, capacidade
-                        e utilização de recursos exigiam consultas manuais e
-                        acompanhamento distribuído entre diferentes rotinas.
-                    </p>
-
-                    <p>
-                        Esse cenário dificultava a identificação rápida de
-                        equipamentos que precisavam de atenção e aumentava o
-                        tempo gasto em tarefas operacionais repetitivas.
-                    </p>
-                </article>
-
-
-                <article class="case-card">
-                    <span class="case-number">02</span>
-
-                    <h3>A solução</h3>
-
-                    <p>
-                        O InfraOS centraliza coleta, inventário, monitoramento,
-                        organização por setores e alertas em uma única interface.
-                    </p>
-
-                    <p>
-                        A aplicação permite consultar informações de hardware,
-                        disponibilidade e utilização de recursos, apoiando a
-                        tomada de decisão e a priorização de intervenções técnicas.
-                    </p>
-                </article>
-
-            </div>
-
-        </div>
-    </section>
-
+<section class="case-hero"><div class="case-container">
+    <a href="index.html#projetos" class="case-back">← Voltar para projetos</a><span class="section-label">CASE TÉCNICO</span>
+    <h1>InfraOS <span>monitoramento e inventário de infraestrutura.</span></h1>
+    <p class="case-hero-description">Solução interna para centralizar informações de endpoints Windows, apoiar o monitoramento operacional e reduzir consultas manuais na gestão de infraestrutura.</p>
+    <div class="project-stack case-stack"><span>Python</span><span>Streamlit</span><span>WMI</span><span>PowerShell</span><span>SQL</span><span>Infraestrutura</span></div>
+</div></section>
+<section class="case-section"><div class="case-container">
+    <span class="section-label">CONTEXTO</span><h2>Do inventário disperso a uma <span>visão centralizada.</span></h2>
+    <div class="case-two-columns">
+        <article class="case-card"><span class="case-number">01</span><h3>O problema</h3><p>Informações de computadores, disponibilidade, capacidade e utilização exigiam consultas manuais e acompanhamento distribuído entre diferentes rotinas.</p><p>Esse cenário dificultava identificar equipamentos que precisavam de atenção e ampliava o trabalho operacional repetitivo.</p></article>
+        <article class="case-card"><span class="case-number">02</span><h3>A solução</h3><p>O InfraOS centraliza coleta, inventário, monitoramento, organização por setores e alertas em uma única interface.</p><p>A aplicação reúne informações de hardware, disponibilidade e utilização para apoiar diagnóstico e priorização técnica.</p></article>
+    </div>
+</div></section>
+<section class="case-section case-features"><div class="case-container">
+    <span class="section-label">FUNCIONALIDADES</span><h2>Da coleta ao diagnóstico <span>em uma única interface.</span></h2>
+    <p class="case-section-intro">As capturas abaixo usam dados demonstrativos para comunicar o fluxo do produto sem expor a infraestrutura real.</p>
+    <div class="case-feature-list">
+        <article class="case-feature"><div class="case-feature-image"><img src="assets/images/infraos-dashboard.png" alt="Dashboard demonstrativo e sanitizado do InfraOS" width="1400" height="683" loading="lazy" decoding="async"></div><div class="case-feature-content"><span class="case-feature-number">01 / DASHBOARD</span><h3>Visão operacional centralizada</h3><p>O dashboard consolida o estado dos endpoints e destaca situações que pedem atenção.</p><ul><li>Status dos equipamentos monitorados</li><li>Indicadores consolidados</li><li>Filtros por setor e situação</li><li>Alertas operacionais em contexto</li></ul></div></article>
+        <article class="case-feature case-feature-reverse"><div class="case-feature-image"><img src="assets/images/visaoporsetores.png" alt="Visão demonstrativa e sanitizada por setores" width="1400" height="620" loading="lazy" decoding="async"></div><div class="case-feature-content"><span class="case-feature-number">02 / SETORES</span><h3>Infraestrutura organizada por área</h3><p>A visão por setores organiza o inventário e facilita comparar áreas e consultar os equipamentos associados.</p><ul><li>Consolidação por setor</li><li>Comparação entre áreas</li><li>Acesso aos equipamentos vinculados</li><li>Acompanhamento de capacidade</li></ul></div></article>
+        <article class="case-feature"><div class="case-feature-image"><img src="assets/images/detalhasetor.png" alt="Detalhes demonstrativos e sanitizados de um setor" width="1400" height="618" loading="lazy" decoding="async"></div><div class="case-feature-content"><span class="case-feature-number">03 / INVENTÁRIO</span><h3>Detalhamento para investigação técnica</h3><p>O detalhamento aproxima indicadores e inventário para localizar condições que exigem investigação.</p><ul><li>Informações de hardware</li><li>Disponibilidade dos endpoints</li><li>Utilização de recursos</li><li>Consulta por contexto operacional</li></ul></div></article>
+    </div>
+</div></section>
+<section class="case-section"><div class="case-container">
+    <span class="section-label">ARQUITETURA</span><h2>Como os dados percorrem <span>a solução.</span></h2><p class="case-section-intro">O InfraOS coleta informações de endpoints Windows, processa os dados em Python, persiste o inventário em SQLite e apresenta indicadores pela interface Streamlit.</p>
+    <div class="architecture-flow" aria-label="Fluxo da arquitetura do InfraOS"><div class="architecture-step"><span class="architecture-number">01</span><h3>Endpoints Windows</h3><p>Equipamentos monitorados.</p></div><span class="architecture-arrow" aria-hidden="true">→</span><div class="architecture-step"><span class="architecture-number">02</span><h3>WMI / PowerShell</h3><p>Coleta remota de dados.</p></div><span class="architecture-arrow" aria-hidden="true">→</span><div class="architecture-step"><span class="architecture-number">03</span><h3>Python</h3><p>Tratamento e regras operacionais.</p></div><span class="architecture-arrow" aria-hidden="true">→</span><div class="architecture-step"><span class="architecture-number">04</span><h3>SQLite</h3><p>Inventário e histórico.</p></div><span class="architecture-arrow" aria-hidden="true">→</span><div class="architecture-step"><span class="architecture-number">05</span><h3>Streamlit</h3><p>Interface operacional.</p></div></div>
+    <div class="architecture-output"><span>Saída operacional</span><strong>Dashboard • Inventário • Alertas • Capacidade • Visão por setores</strong></div>
+</div></section>
+<section class="case-section case-decisions"><div class="case-container">
+    <span class="section-label">DECISÕES TÉCNICAS</span><h2>Escolhas feitas para um <span>ambiente operacional real.</span></h2><p class="case-section-intro">A arquitetura prioriza integração com o ambiente Windows e baixa complexidade operacional.</p>
+    <div class="decision-grid">
+        <article class="decision-card"><span class="decision-number">01</span><span class="decision-tech">WMI + POWERSHELL</span><h3>Coleta integrada ao Windows</h3><p>Recursos nativos consultam informações dos endpoints remotamente.</p><div class="decision-reason"><strong>Por quê?</strong><p>Aproveita mecanismos já presentes no ambiente e evita um agente adicional apenas para inventário.</p></div></article>
+        <article class="decision-card"><span class="decision-number">02</span><span class="decision-tech">PYTHON</span><h3>Processamento e regras operacionais</h3><p>Normalização, tratamento e regras de monitoramento ficam em uma camada central.</p><div class="decision-reason"><strong>Por quê?</strong><p>Facilita integrar coleta, persistência e análise sem fragmentar a lógica.</p></div></article>
+        <article class="decision-card"><span class="decision-number">03</span><span class="decision-tech">SQLITE</span><h3>Persistência de baixa complexidade</h3><p>Inventário, histórico e dados coletados são persistidos localmente.</p><div class="decision-reason"><strong>Por quê?</strong><p>No cenário atual, um banco embarcado reduz dependências e simplifica operação.</p></div></article>
+        <article class="decision-card"><span class="decision-number">04</span><span class="decision-tech">STREAMLIT</span><h3>Interface operacional centralizada</h3><p>Os dados processados se tornam dashboards, inventário, setores e alertas.</p><div class="decision-reason"><strong>Por quê?</strong><p>Mantém a interface integrada ao backend Python e favorece evolução rápida da ferramenta interna.</p></div></article>
+    </div>
+</div></section>
+<section class="case-section case-evolution"><div class="case-container">
+    <span class="section-label">TRADE-OFFS &amp; EVOLUÇÃO</span><h2>Projetado para o cenário atual. <span>Preparado para evoluir.</span></h2><p class="case-section-intro">As possibilidades abaixo são caminhos futuros, não funcionalidades implementadas.</p>
+    <div class="evolution-list">
+        <article class="evolution-item"><div class="evolution-index"><span>01</span></div><div class="evolution-current"><span class="evolution-label">CENÁRIO ATUAL</span><h3>SQLite</h3><p>Persistência simples para a operação atual.</p></div><div class="evolution-arrow" aria-hidden="true">→</div><div class="evolution-future"><span class="evolution-label">SE A ESCALA EXIGIR</span><h3>Banco cliente-servidor</h3><p>Concorrência, múltiplas instâncias ou distribuição podem justificar a mudança.</p></div></article>
+        <article class="evolution-item"><div class="evolution-index"><span>02</span></div><div class="evolution-current"><span class="evolution-label">CENÁRIO ATUAL</span><h3>Coleta direta</h3><p>O fluxo atual mantém a operação simples.</p></div><div class="evolution-arrow" aria-hidden="true">→</div><div class="evolution-future"><span class="evolution-label">SE A ESCALA EXIGIR</span><h3>Processamento assíncrono</h3><p>Mais endpoints podem justificar filas e workers para desacoplar o processamento.</p></div></article>
+        <article class="evolution-item"><div class="evolution-index"><span>03</span></div><div class="evolution-current"><span class="evolution-label">CENÁRIO ATUAL</span><h3>Aplicação centralizada</h3><p>Interface, regras e dados permanecem integrados.</p></div><div class="evolution-arrow" aria-hidden="true">→</div><div class="evolution-future"><span class="evolution-label">SE A COMPLEXIDADE EXIGIR</span><h3>Separação de serviços</h3><p>Separar componentes apenas quando escala, manutenção ou implantação independente justificarem.</p></div></article>
+    </div><div class="evolution-principle"><span class="evolution-principle-label">PRINCÍPIO</span><p>Evoluir a arquitetura quando o problema exigir — <strong>não adicionar complexidade antes dela ser necessária.</strong></p></div>
+</div></section>
+<section class="case-section case-privacy"><div class="case-container case-narrow"><span class="section-label">SEGURANÇA &amp; PRIVACIDADE</span><h2>Demonstrar a solução <span>sem expor a infraestrutura.</span></h2><p>As capturas publicadas nesta página foram substituídas por versões demonstrativas. Elas não apresentam credenciais, IPs, hostnames reais, usuários, números de série, nomes de setores reais ou inventários exportados. O código e os artefatos operacionais permanecem privados.</p></div></section>
+<section class="case-section case-results"><div class="case-container"><span class="section-label">RESULTADO &amp; APRENDIZADOS</span><h2>Menos consultas dispersas. <span>Mais contexto operacional.</span></h2><div class="case-two-columns"><article class="case-card"><span class="case-number">RESULTADO</span><h3>Informação reunida para agir</h3><p>O projeto centralizou inventário, disponibilidade e utilização, organizou a visão por setores e tornou mais direta a identificação de endpoints que precisam de atenção.</p></article><article class="case-card"><span class="case-number">APRENDIZADOS</span><h3>Arquitetura proporcional ao problema</h3><p>O trabalho aprofundou integração com Windows, tratamento de dados remotos, modelagem de inventário e construção de ferramentas internas — incluindo o cuidado necessário ao apresentar software corporativo publicamente.</p></article></div></div></section>
+<section class="case-cta"><div class="case-container"><p>Quer conhecer os outros projetos?</p><a href="index.html#projetos" class="project-btn primary">Voltar ao portfólio</a></div></section>
 </main>
-<section class="case-section">
-    <div class="case-container">
-
-        <span class="section-label">ARQUITETURA</span>
-
-        <h2>
-            Como os dados percorrem
-            <span>a solução.</span>
-        </h2>
-
-        <p class="case-section-intro">
-            O InfraOS coleta informações de endpoints Windows, processa os dados
-            no backend em Python, persiste o inventário em SQLite e apresenta
-            indicadores operacionais por meio da interface Streamlit.
-        </p>
-
-        <div class="architecture-flow">
-
-            <div class="architecture-step">
-                <span class="architecture-number">01</span>
-                <h3>Endpoints Windows</h3>
-                <p>
-                    Equipamentos monitorados na infraestrutura corporativa.
-                </p>
-            </div>
-
-            <span class="architecture-arrow">→</span>
-
-            <div class="architecture-step">
-                <span class="architecture-number">02</span>
-                <h3>WMI / PowerShell</h3>
-                <p>
-                    Coleta remota de informações de hardware, sistema e utilização.
-                </p>
-            </div>
-
-            <span class="architecture-arrow">→</span>
-
-            <div class="architecture-step">
-                <span class="architecture-number">03</span>
-                <h3>Python</h3>
-                <p>
-                    Tratamento, normalização e aplicação das regras operacionais.
-                </p>
-            </div>
-
-            <span class="architecture-arrow">→</span>
-
-            <div class="architecture-step">
-                <span class="architecture-number">04</span>
-                <h3>SQLite</h3>
-                <p>
-                    Persistência do inventário, histórico e informações coletadas.
-                </p>
-            </div>
-
-            <span class="architecture-arrow">→</span>
-
-            <div class="architecture-step">
-                <span class="architecture-number">05</span>
-                <h3>Streamlit</h3>
-                <p>
-                    Interface de monitoramento, setores, inventário e alertas.
-                </p>
-            </div>
-
-        </div>
-
-        <div class="architecture-output">
-            <span>Saída operacional</span>
-            <strong>
-                Dashboard • Inventário • Alertas • Capacidade • Visão por setores
-            </strong>
-        </div>
-
-    </div>
-
-
-<!-- FUNCIONALIDADES -->
-<section class="case-section case-features">
-    <div class="case-container">
-
-        <span class="section-label">FUNCIONALIDADES</span>
-
-        <h2>
-            Da coleta ao diagnóstico
-            <span>em uma única interface.</span>
-        </h2>
-
-        <p class="case-section-intro">
-            O InfraOS reúne diferentes visões operacionais para transformar
-            dados coletados dos endpoints em informações úteis para
-            acompanhamento, diagnóstico e tomada de decisão.
-        </p>
-
-        <div class="case-feature-list">
-
-            <!-- DASHBOARD -->
-            <article class="case-feature">
-
-                <div class="case-feature-image">
-                    <img
-                        src="assets/images/infraos-dashboard.png"
-                        alt="Dashboard principal do InfraOS"
-                        loading="lazy"
-                    >
-                </div>
-
-                <div class="case-feature-content">
-                    <span class="case-feature-number">01 / DASHBOARD</span>
-
-                    <h3>Visão operacional centralizada</h3>
-
-                    <p>
-                        O dashboard consolida o estado dos equipamentos
-                        monitorados e permite identificar rapidamente endpoints
-                        online, offline, sem coleta recente ou que exigem atenção.
-                    </p>
-
-                    <ul>
-                        <li>Status dos equipamentos monitorados</li>
-                        <li>Indicadores consolidados da infraestrutura</li>
-                        <li>Filtros por setor e situação</li>
-                        <li>Identificação rápida de alertas operacionais</li>
-                    </ul>
-                </div>
-
-            </article>
-
-
-            <!-- SETORES -->
-            <article class="case-feature case-feature-reverse">
-
-                <div class="case-feature-image">
-                    <img
-                        src="assets/images/visaoporsetores.png"
-                        alt="Visão consolidada por setores do InfraOS"
-                        loading="lazy"
-                    >
-                </div>
-
-                <div class="case-feature-content">
-                    <span class="case-feature-number">02 / SETORES</span>
-
-                    <h3>Infraestrutura organizada por área</h3>
-
-                    <p>
-                        A visão por setores organiza o inventário de forma
-                        operacional, permitindo comparar áreas e consultar os
-                        equipamentos associados a cada setor.
-                    </p>
-
-                    <ul>
-                        <li>Consolidação dos equipamentos por setor</li>
-                        <li>Comparação entre diferentes áreas</li>
-                        <li>Acesso aos equipamentos vinculados</li>
-                        <li>Apoio ao acompanhamento de capacidade</li>
-                    </ul>
-                </div>
-
-            </article>
-
-
-            <!-- DETALHES -->
-            <article class="case-feature">
-
-                <div class="case-feature-image">
-                    <img
-                        src="assets/images/detalhasetor.png"
-                        alt="Detalhes de setor no InfraOS"
-                        loading="lazy"
-                    >
-                </div>
-
-                <div class="case-feature-content">
-                    <span class="case-feature-number">03 / INVENTÁRIO</span>
-
-                    <h3>Detalhamento para investigação técnica</h3>
-
-                    <p>
-                        As informações coletadas permitem aprofundar a análise
-                        dos equipamentos e localizar rapidamente máquinas que
-                        apresentam condições que exigem investigação.
-                    </p>
-
-                    <ul>
-                        <li>Informações de hardware</li>
-                        <li>Disponibilidade dos endpoints</li>
-                        <li>Utilização de recursos</li>
-                        <li>Consulta do inventário por contexto operacional</li>
-                    </ul>
-                </div>
-
-            </article>
-
-        </div>
-
-    </div> 
-</section>    
-
-<footer class="footer">
-    <div class="footer-container">
-
-        <a href="index.html#inicio" class="footer-logo">
-            &lt;/&gt; <span>Alison</span> Silva
-        </a>
-
-        <p>
-            Case técnico • InfraOS
-        </p>
-
-        <a href="index.html#projetos" class="back-to-top">
-            Voltar ao portfólio ↑
-        </a>
-
-    </div>
-
-</footer>
-
+<footer class="footer"><div class="footer-container"><a href="index.html#inicio" class="footer-logo">&lt;/&gt; <span>Alison</span> Silva</a><p>Case técnico • InfraOS</p><a href="index.html#projetos" class="back-to-top">Voltar ao portfólio ↑</a></div></footer>
 </body>
 </html>

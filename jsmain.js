@@ -1,63 +1,53 @@
-const carousels = document.querySelectorAll(
-    ".finance-carousel, .infra-carousel"
-);
-
-carousels.forEach((carousel) => {
-    const images = carousel.querySelectorAll(".carousel-image");
-    const dots = carousel.querySelectorAll(".carousel-dot");
-
+document.querySelectorAll(".carousel").forEach((carousel) => {
+    const images = Array.from(carousel.querySelectorAll(".carousel-image"));
+    const dots = Array.from(carousel.querySelectorAll(".carousel-dot"));
     const prevButton = carousel.querySelector(".carousel-prev");
     const nextButton = carousel.querySelector(".carousel-next");
 
-    let currentSlide = 0;
-
-    function showSlide(index) {
-        images.forEach((image) => {
-            image.classList.remove("active");
-        });
-
-        dots.forEach((dot) => {
-            dot.classList.remove("active");
-        });
-
-        images[index].classList.add("active");
-
-        if (dots[index]) {
-            dots[index].classList.add("active");
-        }
-
-        currentSlide = index;
+    if (images.length === 0) {
+        carousel.classList.add("is-static");
+        return;
     }
 
-    if (nextButton) {
-        nextButton.addEventListener("click", () => {
-            let nextSlide = currentSlide + 1;
+    let currentSlide = Math.max(0, images.findIndex((image) => image.classList.contains("active")));
 
-            if (nextSlide >= images.length) {
-                nextSlide = 0;
-            }
+    const showSlide = (index) => {
+        const normalizedIndex = (index + images.length) % images.length;
 
-            showSlide(nextSlide);
+        images.forEach((image, imageIndex) => {
+            const isActive = imageIndex === normalizedIndex;
+            image.classList.toggle("active", isActive);
+            image.setAttribute("aria-hidden", String(!isActive));
         });
+
+        dots.forEach((dot, dotIndex) => {
+            const isActive = dotIndex === normalizedIndex;
+            dot.classList.toggle("active", isActive);
+            dot.setAttribute("aria-current", isActive ? "true" : "false");
+        });
+
+        currentSlide = normalizedIndex;
+    };
+
+    if (images.length === 1) {
+        carousel.classList.add("is-static");
     }
 
-    if (prevButton) {
-        prevButton.addEventListener("click", () => {
-            let previousSlide = currentSlide - 1;
+    nextButton?.addEventListener("click", () => showSlide(currentSlide + 1));
+    prevButton?.addEventListener("click", () => showSlide(currentSlide - 1));
 
-            if (previousSlide < 0) {
-                previousSlide = images.length - 1;
-            }
-
-            showSlide(previousSlide);
-        });
-    }
-
-    dots.forEach((dot, index) => {
-        dot.addEventListener("click", () => {
-            showSlide(index);
-        });
+    dots.slice(0, images.length).forEach((dot, index) => {
+        dot.addEventListener("click", () => showSlide(index));
     });
 
-    showSlide(0);
+    dots.slice(images.length).forEach((dot) => {
+        dot.hidden = true;
+    });
+
+    carousel.addEventListener("keydown", (event) => {
+        if (event.key === "ArrowLeft") showSlide(currentSlide - 1);
+        if (event.key === "ArrowRight") showSlide(currentSlide + 1);
+    });
+
+    showSlide(currentSlide);
 });
