@@ -2918,3 +2918,69 @@ body {
         padding: 24px;
     }
 }
+
+/* Alvos de toque — auditoria mobile final */
+
+.project-btn,
+.logo,
+.case-back,
+.footer-logo,
+.back-to-top {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.project-content,
+.project-preview {
+    min-width: 0;
+}
+
+.project-links {
+    flex-wrap: wrap;
+}
+
+.carousel .carousel-dot,
+.carousel .carousel-dot.active {
+    position: relative;
+    width: 44px;
+    min-width: 44px;
+    height: 44px;
+    min-height: 44px;
+    background: transparent;
+}
+
+.carousel .carousel-dot::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 10px;
+    height: 10px;
+    border-radius: 999px;
+    background: #475569;
+    transform: translate(-50%, -50%);
+}
+
+.carousel .carousel-dot.active::before {
+    width: 26px;
+    background: #00d4ff;
+}
+
+.carousel .carousel-dots {
+    gap: 0;
+}
+
+@media (max-width: 780px) {
+    .nav-links a {
+        min-height: 44px;
+        display: inline-flex;
+        align-items: center;
+        padding-inline: 3px;
+    }
+
+    .nav-links a::after {
+        bottom: 3px;
+    }
+}
