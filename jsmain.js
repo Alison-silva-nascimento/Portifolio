@@ -51,3 +51,77 @@ document.querySelectorAll(".carousel").forEach((carousel) => {
 
     showSlide(currentSlide);
 });
+
+const heroShowcase = document.querySelector("[data-hero-showcase]");
+
+if (heroShowcase) {
+    const slides = Array.from(heroShowcase.querySelectorAll(".hero-showcase-slide"));
+    const dots = Array.from(heroShowcase.querySelectorAll(".hero-showcase-dots button"));
+    const previousButton = heroShowcase.querySelector(".hero-showcase-prev");
+    const nextButton = heroShowcase.querySelector(".hero-showcase-next");
+    const role = document.querySelector(".hero-rotating-role");
+    const roles = [
+        "Desenvolvedor de Software.",
+        "Especialista em Automação.",
+        "Analista de Sistemas e Infraestrutura."
+    ];
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    let current = 0;
+    let rotationTimer;
+
+    const render = (index) => {
+        const next = (index + slides.length) % slides.length;
+
+        slides.forEach((slide, slideIndex) => {
+            const active = slideIndex === next;
+            slide.classList.toggle("active", active);
+            slide.setAttribute("aria-hidden", String(!active));
+            slide.tabIndex = active ? 0 : -1;
+        });
+
+        dots.forEach((dot, dotIndex) => {
+            const active = dotIndex === next;
+            dot.classList.toggle("active", active);
+            dot.setAttribute("aria-current", String(active));
+        });
+
+        if (role && role.textContent !== roles[next]) {
+            role.classList.add("is-changing");
+            window.setTimeout(() => {
+                role.textContent = roles[next];
+                role.classList.remove("is-changing");
+            }, reduceMotion ? 0 : 180);
+        }
+
+        current = next;
+    };
+
+    const stopRotation = () => window.clearInterval(rotationTimer);
+    const startRotation = () => {
+        stopRotation();
+        if (!reduceMotion) rotationTimer = window.setInterval(() => render(current + 1), 4200);
+    };
+
+    previousButton?.addEventListener("click", () => {
+        render(current - 1);
+        startRotation();
+    });
+
+    nextButton?.addEventListener("click", () => {
+        render(current + 1);
+        startRotation();
+    });
+
+    dots.forEach((dot, index) => dot.addEventListener("click", () => {
+        render(index);
+        startRotation();
+    }));
+
+    heroShowcase.addEventListener("mouseenter", stopRotation);
+    heroShowcase.addEventListener("mouseleave", startRotation);
+    heroShowcase.addEventListener("focusin", stopRotation);
+    heroShowcase.addEventListener("focusout", startRotation);
+
+    render(0);
+    startRotation();
+}

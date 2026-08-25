@@ -51,8 +51,8 @@
                 <span class="hero-label">ALISON SILVA • ANALISTA DE SISTEMAS &amp; DESENVOLVEDOR</span>
 
                 <h1>
-                    Eu transformo rotinas de TI em
-                    <span>software que funciona.</span>
+                    Me chamo Alison Silva, sou
+                    <span class="hero-rotating-role" aria-live="polite">Desenvolvedor de Software.</span>
                 </h1>
 
                 <p class="hero-description">
@@ -88,41 +88,34 @@
                 </div>
             </div>
 
-            <div class="hero-visual">
-                <div class="code-card">
-                    <div class="code-card-header">
-                        <span></span>
-                        <span></span>
-                        <span></span>
+            <div class="hero-showcase" data-hero-showcase>
+                <div class="hero-showcase-glow" aria-hidden="true"></div>
+
+                <div class="hero-showcase-frame">
+                    <a href="financeos.html" class="hero-showcase-slide active" aria-label="Conhecer o case FinanceOS">
+                        <img src="assets/images/financeos-dashboard.png" alt="Dashboard principal do FinanceOS">
+                        <span><small>CASE 01</small><strong>FinanceOS</strong></span>
+                    </a>
+
+                    <a href="infraos.html" class="hero-showcase-slide" aria-label="Conhecer o case InfraOS" aria-hidden="true" tabindex="-1">
+                        <img src="assets/images/infraos-dashboard.png" alt="Dashboard de monitoramento do InfraOS">
+                        <span><small>CASE 02</small><strong>InfraOS</strong></span>
+                    </a>
+
+                    <a href="#especialidades" class="hero-showcase-slide hero-showcase-code" aria-label="Conhecer as especialidades" aria-hidden="true" tabindex="-1">
+                        <code><b>def</b> resolver(problema):<br>&nbsp;&nbsp;contexto = entender(problema)<br>&nbsp;&nbsp;solucao = construir(contexto)<br>&nbsp;&nbsp;<b>return</b> validar(solucao)</code>
+                        <span><small>MÉTODO</small><strong>Operação → Software</strong></span>
+                    </a>
+                </div>
+
+                <div class="hero-showcase-controls" aria-label="Destaques do portfólio">
+                    <button type="button" class="hero-showcase-arrow hero-showcase-prev" aria-label="Destaque anterior">←</button>
+                    <div class="hero-showcase-dots">
+                        <button type="button" class="active" aria-label="Mostrar FinanceOS" aria-current="true"></button>
+                        <button type="button" aria-label="Mostrar InfraOS" aria-current="false"></button>
+                        <button type="button" aria-label="Mostrar método de trabalho" aria-current="false"></button>
                     </div>
-
-                    <div class="code-content">
-                        <p><span class="code-purple">class</span> <span class="code-blue">AlisonSilva</span>:</p>
-
-                        <p class="indent">
-                            role = <span class="code-green">"Systems Analyst & Software Developer"</span>
-                        </p>
-
-                        <p class="indent">
-                            stack = [
-                        </p>
-
-                        <p class="indent-2">
-                            <span class="code-green">"Python"</span>,
-                            <span class="code-green">"C#/.NET"</span>,
-                        </p>
-
-                        <p class="indent-2">
-                            <span class="code-green">"Automation"</span>,
-                            <span class="code-green">"Data"</span>
-                        </p>
-
-                        <p class="indent">]</p>
-
-                        <p class="indent">
-                            building = <span class="code-green">"real solutions"</span>
-                        </p>
-                    </div>
+                    <button type="button" class="hero-showcase-arrow hero-showcase-next" aria-label="Próximo destaque">→</button>
                 </div>
             </div>
 
@@ -842,7 +835,7 @@
     </div>
 </footer>
 
-<script src="jsmain.js" defer></script>
+<script src="jsmain.js?v=20260825" defer></script>
 
 </body>
 </html>
