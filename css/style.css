@@ -3082,6 +3082,37 @@ body {
     }
 }
 
+/* Identidade compacta e consistente nos cabeçalhos dos cases. */
+.case-monogram {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    color: var(--theme-accent, #f97316);
+    letter-spacing: 0;
+}
+
+.case-monogram > strong {
+    color: var(--theme-accent-soft, #fdba74);
+    font-size: 1rem;
+}
+
+.case-monogram-bars {
+    display: flex;
+    align-items: flex-end;
+    gap: 3px;
+    height: 19px;
+}
+
+.case-monogram-bars i {
+    display: block;
+    width: 2px;
+    background: var(--theme-accent, #f97316);
+}
+
+.case-monogram-bars i:nth-child(1) { height: 8px; }
+.case-monogram-bars i:nth-child(2) { height: 13px; }
+.case-monogram-bars i:nth-child(3) { height: 18px; }
+
 /* =====================================================
    CASE FINANCEOS
 ===================================================== */
