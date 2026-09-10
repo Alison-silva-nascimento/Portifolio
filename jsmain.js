@@ -44,6 +44,27 @@ if (carousel) {
 const sections = [...document.querySelectorAll("main section[id]")];
 const navLinks = [...document.querySelectorAll(".nav-list a")];
 const revealItems = [...document.querySelectorAll(".reveal")];
+const mobileMenuToggle = document.querySelector(".mobile-menu-toggle");
+const mobileMenu = document.querySelector("#mobile-nav-menu");
+
+if (mobileMenuToggle && mobileMenu) {
+    const closeMobileMenu = () => {
+        mobileMenu.classList.remove("mobile-open");
+        mobileMenuToggle.setAttribute("aria-expanded", "false");
+        mobileMenuToggle.setAttribute("aria-label", "Abrir menu");
+    };
+
+    mobileMenuToggle.addEventListener("click", () => {
+        const isOpen = mobileMenu.classList.toggle("mobile-open");
+        mobileMenuToggle.setAttribute("aria-expanded", String(isOpen));
+        mobileMenuToggle.setAttribute("aria-label", isOpen ? "Fechar menu" : "Abrir menu");
+    });
+
+    mobileMenu.querySelectorAll("a").forEach((link) => link.addEventListener("click", closeMobileMenu));
+    document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") closeMobileMenu();
+    });
+}
 
 const revealObserver = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
